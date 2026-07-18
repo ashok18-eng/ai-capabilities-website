@@ -4,8 +4,9 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'The Road to Attention — Language AI Evolution',
-  description: 'A learning guide for data scientists moving into AI engineering: the evolution of language AI from rule-based NLP to attention.',
+  title: 'Enterprise AI Engineering Atlas',
+  description:
+    'A visual learning workbench for data scientists transitioning into enterprise AI engineering.',
   generator: 'v0.app',
   icons: {
     icon: [

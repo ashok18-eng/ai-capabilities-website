@@ -127,6 +127,35 @@ export function SectionContent({ sectionNum }: ContentProps) {
       return (
         <>
           <p className="text-[18px] text-[var(--text)] leading-relaxed mb-6">
+            N-gram language models added sequence back into statistical NLP. Instead of treating a document as an unordered bag of words, an n-gram model predicts the next word from the previous <em>n - 1</em> words.
+          </p>
+          <Callout variant="example" label="Example — local prediction">
+            <p className="m-0">
+              In a bigram model, "credit ___" might strongly predict "card" or "risk." In a trigram model, "credit card ___" might predict "payment," "fraud," or "limit." The model learns these probabilities from observed counts.
+            </p>
+          </Callout>
+          <p className="text-[18px] text-[var(--text)] leading-relaxed mb-6">
+            This was a meaningful improvement because word order started to matter. "Not approved" could be treated differently from "approved," and common phrases could be modeled directly. N-grams powered spell correction, autocomplete, speech recognition, machine translation, and early text generation systems.
+          </p>
+          <p className="text-[18px] text-[var(--text)] leading-relaxed mb-6">
+            But n-grams only see a fixed local window. A trigram model knows the previous two words; a 5-gram model knows the previous four. As the window grows, the number of possible combinations explodes, and most combinations never appear in training data. This is the <strong>sparsity problem</strong>.
+          </p>
+          <Callout variant="insight" label="Why n-grams hit a wall">
+            <p className="m-0">
+              N-grams model local word patterns well, but they do not understand meaning. They struggle with synonyms, long-range dependencies, and sentence-level context because they rely on exact observed sequences.
+            </p>
+          </Callout>
+          <Callout variant="ds" label="For the data scientist">
+            <p className="m-0">
+              Think of n-grams as feature engineering over adjacent tokens. They are still useful in keyword search and classical classifiers, but they cannot generalize the way learned dense representations can.
+            </p>
+          </Callout>
+        </>
+      )
+    case 6:
+      return (
+        <>
+          <p className="text-[18px] text-[var(--text)] leading-relaxed mb-6">
             Models need numbers, not raw words. Early systems used sparse <strong>one-hot</strong> vectors: every word in the vocabulary gets its own position. With a 100,000-word vocabulary, each word is a vector of length 100,000 — one value set to 1, the rest 0.
           </p>
           <p className="text-[18px] text-[var(--text)] leading-relaxed mb-6">
@@ -158,7 +187,7 @@ export function SectionContent({ sectionNum }: ContentProps) {
           </Callout>
         </>
       )
-    case 6:
+    case 7:
       return (
         <>
           <p className="text-[18px] text-[var(--text)] leading-relaxed mb-6">
@@ -182,7 +211,7 @@ export function SectionContent({ sectionNum }: ContentProps) {
           </Callout>
         </>
       )
-    case 7:
+    case 8:
       return (
         <>
           <p className="text-[18px] text-[var(--text)] leading-relaxed mb-6">
@@ -203,7 +232,7 @@ export function SectionContent({ sectionNum }: ContentProps) {
           </Callout>
         </>
       )
-    case 8:
+    case 9:
       return (
         <>
           <p className="text-[18px] text-[var(--text)] leading-relaxed mb-6">
@@ -230,7 +259,7 @@ export function SectionContent({ sectionNum }: ContentProps) {
           </Callout>
         </>
       )
-    case 9:
+    case 10:
       return (
         <>
           <p className="text-[18px] text-[var(--text)] leading-relaxed mb-6">
@@ -249,7 +278,7 @@ export function SectionContent({ sectionNum }: ContentProps) {
           </p>
         </>
       )
-    case 10:
+    case 11:
       return (
         <>
           <p className="text-[18px] text-[var(--text)] leading-relaxed mb-6">
@@ -279,7 +308,7 @@ export function SectionContent({ sectionNum }: ContentProps) {
           </Callout>
         </>
       )
-    case 11:
+    case 12:
       return (
         <>
           <p className="text-[18px] text-[var(--text)] leading-relaxed mb-6">
@@ -301,7 +330,7 @@ export function SectionContent({ sectionNum }: ContentProps) {
           </Callout>
         </>
       )
-    case 12:
+    case 13:
       return (
         <>
           <p className="text-[18px] text-[var(--text)] leading-relaxed mb-6">
@@ -325,7 +354,7 @@ export function SectionContent({ sectionNum }: ContentProps) {
           </Callout>
         </>
       )
-    case 13:
+    case 14:
       return (
         <>
           <p className="text-[18px] text-[var(--text)] leading-relaxed mb-6">
@@ -367,7 +396,7 @@ export function SectionContent({ sectionNum }: ContentProps) {
           </Callout>
         </>
       )
-    case 14:
+    case 15:
       return (
         <>
           <p className="text-[18px] text-[var(--text)] leading-relaxed mb-6">
@@ -384,19 +413,11 @@ export function SectionContent({ sectionNum }: ContentProps) {
           <p className="text-[18px] text-[var(--text)] leading-relaxed mb-6">
             So attention isn&apos;t just a historical model component — it&apos;s a conceptual pattern: <strong>dynamic, relevance-based selection</strong>. Once you see that pattern, the rest of modern AI engineering gets much easier to reason about.
           </p>
-        </>
-      )
-    case 15:
-      return (
-        <>
-          <p className="text-[18px] text-[var(--text)] leading-relaxed mb-6">
-            The journey from rules to attention shows one pattern: each solution solved real problems but introduced new constraints. Attention broke the fixed-context bottleneck by enabling any token to directly access any other token&apos;s information at any layer.
-          </p>
           <p className="text-[18px] text-[var(--text)] leading-relaxed mb-6">
             What came next was inevitable: if attention can connect anything to anything, why keep recurrence? Why not let every token attend to every other token in parallel? That shift — from sequential LSTM processing to parallel attention — is the Transformer. And Transformers are the foundation of every major language model today.
           </p>
           <p className="text-[18px] text-[var(--text)] leading-relaxed mb-6">
-            But this guide stops at attention, because understanding the problem attention solved is the key to understanding why Transformers work the way they do.
+            This guide stops at attention because understanding the problem attention solved is the key to understanding why Transformers work the way they do.
           </p>
         </>
       )
