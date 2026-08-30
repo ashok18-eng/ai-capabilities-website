@@ -1,5 +1,7 @@
-import { LearningApp } from '@/components/LearningApp'
+import { architectureContent } from '@/lib/architecture-content'
 
 export default function Page() {
-  return <LearningApp />
+  return (
+    <div dangerouslySetInnerHTML={{ __html: architectureContent }} />
+  )
 }

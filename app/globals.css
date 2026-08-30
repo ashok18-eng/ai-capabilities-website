@@ -1,68 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 @import 'tailwindcss';
-@import 'tw-animate-css';
-@import 'shadcn/tailwind.css';
-
-@custom-variant dark (&:is(.dark *));
-
-@theme inline {
-  --font-display: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --font-body: 'Source Serif 4', Georgia, 'Times New Roman', serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
-}
-
-:root {
-  color-scheme: light;
-
-  --ink: #13201b;
-  --ink-2: #20322b;
-  --ink-line: #31483e;
-  --paper: #f5f7f2;
-  --card: #ffffff;
-  --text: #18211d;
-  --text-2: #4b5a53;
-  --muted: #748078;
-  --line: #dfe5dc;
-  --line-2: #cbd5c9;
-  --accent: #176b5b;
-  --accent-2: #2f8d79;
-  --accent-soft: #dff1ec;
-  --accent-ink: #104238;
-  --focus: #c47716;
-  --focus-2: #e1a038;
-  --focus-soft: #fff1d7;
-  --focus-ink: #6b4106;
-  --teal: #0f8f83;
-  --teal-soft: #dff3f0;
-  --teal-ink: #07574f;
-  --radius: 8px;
-}
-
-.dark {
-  color-scheme: dark;
-
-  --ink: #e8f0eb;
-  --ink-2: #d7e4de;
-  --ink-line: #c1d1c9;
-  --paper: #101614;
-  --card: #17211d;
-  --text: #eef4f0;
-  --text-2: #bcc9c2;
-  --muted: #899991;
-  --line: #2a3832;
-  --line-2: #3a4b44;
-  --accent: #6fc7b3;
-  --accent-2: #4cb09b;
-  --accent-soft: #173c35;
-  --accent-ink: #d7fff5;
-  --focus: #e1a038;
-  --focus-2: #f1bd5b;
-  --focus-soft: #3a2b13;
-  --focus-ink: #ffe0a1;
-  --teal: #73d6cb;
-  --teal-soft: #153d39;
-  --teal-ink: #c5fff8;
-}
 
 * {
   box-sizing: border-box;
@@ -78,27 +15,7 @@ html {
   }
 }
 
-body {
-  margin: 0;
-  background: var(--paper);
-  color: var(--text);
-  font-family: var(--font-body);
-  font-size: 18px;
-  line-height: 1.65;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-
-button,
-input {
-  font: inherit;
-}
-
-button {
-  cursor: pointer;
-}
-
 ::selection {
-  background: var(--focus-soft);
-  color: var(--focus-ink);
+  background: #dbeafe;
+  color: #16366f;
 }
